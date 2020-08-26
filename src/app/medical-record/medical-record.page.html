@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="main">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light">Registro médico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="mt-2 ion-padding-horizontal">
+    <ion-col class="text-justified">
+      Aquí puedes revisar el historial médico que has acumulado atendiéndote con nosotros.
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="mt-2 ion-padding-horizontal">
+    <ion-col class="text-centered">
+      <div *ngFor="let mr of medicalRecords" class="record-container">
+        <ion-item class="ion-no-padding item-transparent" lines="none">
+          <ion-label>
+            <h2 class="w-90">{{mr.date}}</h2>
+            <h3>{{mr.specialty}}</h3>
+            <h3></h3>
+          </ion-label>
+          <ion-icon name="eye" color="primary" class="vertical-center r-1" (click)="viewRecord(mr)"></ion-icon>
+        </ion-item>
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

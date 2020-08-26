@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="main">
+    <ion-title class="ion-text-center" color="light">Registro del {{record.date}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row class="mt-1">
+    <!-- <p class="w-100 my-0 text-centered" style="color:grey">Profesional a cargo</p> -->
+    <ion-item-divider>
+      <ion-label>Profesional a cargo</ion-label>
+    </ion-item-divider>
+    <ion-col>
+      <ion-item lines="none" class="">
+        <ion-avatar slot="start">
+          <img [src]="'../../../assets/images/' + record.doctor.picture + '.jpg'" />
+        </ion-avatar>
+        <ion-label>
+          <h3>{{record.doctor.name}}</h3>
+          <p>{{record.doctor.profession}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="">
+    <ion-item-divider>
+      <ion-label>Razón de consulta</ion-label>
+    </ion-item-divider>
+    <ion-col class="ion-padding-horizontal">
+      <p>{{record.reason}}</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="">
+    <ion-item-divider>
+      <ion-label>Actividades</ion-label>
+    </ion-item-divider>
+    <ion-col class="ion-padding-horizontal">
+      <p>{{record.activity}}</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="">
+    <ion-item-divider>
+      <ion-label>Observación del profesional</ion-label>
+    </ion-item-divider>
+    <ion-col class="ion-padding-horizontal">
+      <p>{{record.observations}}</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="">
+    <ion-item-divider>
+      <ion-label>Indicaciones del profesional</ion-label>
+    </ion-item-divider>
+    <ion-col class="ion-padding-horizontal">
+      <p>{{record.advices}}</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="">
+    <ion-item-divider>
+      <ion-label>Medicación</ion-label>
+    </ion-item-divider>
+    <ion-col class="ion-padding-horizontal">
+      <p>{{record.medication}}</p>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

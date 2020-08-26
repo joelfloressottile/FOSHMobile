@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="main">
+    <ion-title color="light" class="ion-text-center">{{title}}</ion-title>
+    <ion-icon name="close" slot="end" class="absolute r-0 mr-2 toolbar-icon" color="light" (click)="closeModal()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides #slides [options]="slideOptions" class="w-100 h-90">
+    <ion-slide *ngFor="let question of questionnaire.questions; let i = index" class="w-100 d-block">
+      <ion-row>
+        <ion-col class="ion-padding-horizontal">
+          <p class="mb-1">{{question.title}}</p>
+          <ion-list class="pt-0">
+            <ion-radio-group [name]="'q'+i">
+              <ion-list-header class="px-0">
+                <ion-label>Escoge sólo una de las siguientes alternativas</ion-label>
+              </ion-list-header>
+              <ion-item *ngFor="let option of question.options">
+                <ion-label>{{option.title}}</ion-label>
+                <ion-radio [value]="option.value"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
+  <ion-row class="w-100 h-10">
+    <ion-col class="text-centered" (click)="moveSlideBackward(slideIndex)">
+      Anterior
+    </ion-col>
+    <ion-col class="text-centered" (click)="moveSlideForward(slideIndex)">
+      Siguiente
+    </ion-col>
+  </ion-row>
+</ion-content>

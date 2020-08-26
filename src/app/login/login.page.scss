@@ -1,0 +1,33 @@
+// ion-content{
+//     --background: url('../../assets/images/doctor-with-patient.jpg') no-repeat center center / cover;
+// }
+
+.background{
+    background: url('../../assets/images/doctor-with-patient.jpg') no-repeat center center / cover;
+}
+
+
+ion-item{
+    border-radius: 10px;
+    width:100%;
+}
+
+ion-card{
+    //background:#303030;
+    border-radius:10px;
+}
+
+ion-button{
+    --color: white;
+    --border-radius: 10px;
+}
+// ion-content.background{
+//     // --background: rgb(2,0,36);
+//     // --background: linear-gradient(0deg, #182848 0%, #4b6cb7 100%);
+
+//     // --background: -webkit-linear-gradient(to bottom, #43c6ac, #191654); /* Chrome 10-25, Safari 5.1-6 */
+//     // --background: linear-gradient(to bottom, #43c6ac, #191654); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+//     --background: -webkit-linear-gradient(to bottom, #536976, #292e49); /* Chrome 10-25, Safari 5.1-6 */
+//     --background: linear-gradient(to bottom, #536976, #292e49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// }
