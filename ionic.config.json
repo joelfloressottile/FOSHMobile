@@ -1,0 +1,7 @@
+{
+  "name": "ccvalparaiso",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
