@@ -1,2 +1,2 @@
 # FOSHMobile
-Mobile app that help patients track their health progress and check their medical records.
+Mobile app that helps patients track their health progress and check their medical records.
