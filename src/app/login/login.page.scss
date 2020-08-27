@@ -4,6 +4,7 @@
 
 .background{
     background: url('../../assets/images/doctor-with-patient.jpg') no-repeat center center / cover;
+    filter: blur(1px);
 }
 
 
@@ -13,13 +14,17 @@ ion-item{
 }
 
 ion-card{
-    //background:#303030;
+    background:#202020cc;
     border-radius:10px;
 }
 
 ion-button{
     --color: white;
     --border-radius: 10px;
+}
+
+.shadow-on-image{
+    filter: drop-shadow(1px 1px 1px black);
 }
 // ion-content.background{
 //     // --background: rgb(2,0,36);

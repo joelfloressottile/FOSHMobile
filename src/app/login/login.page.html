@@ -3,8 +3,9 @@
   
   <ion-row class="w-100 vertical-center">
     <ion-col class="text-centered">
-      <ion-card color="dark">
-        <img src="../../../assets/images/cclogo.png" class="w-60 mt-2">
+      <ion-card>
+        <div class="w-100 h-100" style="border-radius:10px; z-index:-1"></div>
+        <img src="../../../assets/images/cclogo.png" class="w-60 mt-2 shadow-on-image">
         <!-- <ion-card-header class="mb-2">
           <ion-card-title size="small">¡Bienvenido a CyC Valparaíso. Comienza ahora a preocuparte con tu salud, colaborando con nuestro profesionales.</ion-card-title>
         </ion-card-header> -->
@@ -23,7 +24,7 @@
               </ion-item>
             </ion-row>
             <ion-label (click)="navCtrl.navigateForward('password-recovery')">
-              <b>No recuerdo mi contraseña</b>
+              <b style="color: lightgrey">No recuerdo mi contraseña</b>
             </ion-label>
             <ion-button class="w-100 mt-3" color="main" [disabled]="!loginForm.valid" (click)="login()">
               <span style="color:white">Iniciar sesión</span> 

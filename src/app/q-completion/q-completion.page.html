@@ -12,7 +12,7 @@
         <ion-col class="ion-padding-horizontal">
           <p class="mb-1">{{question.title}}</p>
           <ion-list class="pt-0">
-            <ion-radio-group [name]="'q'+i">
+            <ion-radio-group [name]="'q'+i" (ionChange)="radioSelection($event)">
               <ion-list-header class="px-0">
                 <ion-label>Escoge sólo una de las siguientes alternativas</ion-label>
               </ion-list-header>
@@ -27,11 +27,13 @@
     </ion-slide>
   </ion-slides>
   <ion-row class="w-100 h-10">
-    <ion-col class="text-centered" (click)="moveSlideBackward(slideIndex)">
-      Anterior
+    <ion-col class="text-centered ion-activatable" [ngClass]="{'disabled-button': slideIndex == 0, 'enabled-button': slideIndex != 0 }" (click)="moveSlideBackward(slideIndex)">
+      <p class="vertical-center w-100 text-centered">Anterior</p>
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
     </ion-col>
-    <ion-col class="text-centered" (click)="moveSlideForward(slideIndex)">
-      Siguiente
+    <ion-col class="text-centered enabled-button ion-activatable" (click)="answers[slideIndex] != null ? moveSlideForward(slideIndex) : false" [ngClass]="{'disabled-button': answers[slideIndex] == null, 'enabled-button': answers[slideIndex] != null }">
+      <p class="vertical-center w-100 text-centered">{{slideIndex != questionnaire.questions.length - 1 ? 'Siguiente' : 'Terminar'}}</p>
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
     </ion-col>
   </ion-row>
 </ion-content>
